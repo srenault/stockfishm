@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stockfishdroid</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width = device-width, height=device-height, initial-scale = 1, user-scalable = no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" media="(device-height: 568px)">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <h1>Stockfishdroid</h1>
+    <header>
+      <button class="stockfish-start">Start</button>
+      <button class="stockfish-exit" disabled>Exit</button>
+    </header>
+    <div class="stockfish-command">
+      <textarea class="stockfish-command-text" disabled></textarea>
+      <button class="stockfish-command-send" disabled>Send</button>
+    </div>
+    <div class="stockfish-output"></div>
+    <script src="cordova.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

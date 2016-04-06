@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'latoregular';
+    src: url('fonts/Lato/lato-regular.eot');
+    src: url('fonts/Lato/lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Lato/lato-regular.woff2') format('woff2'),
+         url('fonts/Lato/lato-regular.woff') format('woff'),
+         url('fonts/Lato/lato-regular.ttf') format('truetype'),
+         url('fonts/Lato/lato-regular.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('fonts/AlexBrush/alexbrush-regular.eot');
+    src: url('fonts/AlexBrush/alexbrush-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AlexBrush/alexbrush-regular.woff2') format('woff2'),
+         url('fonts/AlexBrush/alexbrush-regular.woff') format('woff'),
+         url('fonts/AlexBrush/alexbrush-regular.ttf') format('truetype'),
+         url('fonts/AlexBrush/alexbrush-regular.svg#alex_brushregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    font-size: 100%;
+}
+
+body {
+    font-family: AllerRegular, sans-serif;
+    font-size: 1rem;
+    color: white;
+    height: 100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background: #487EC2;
+    font-family: 'latoregular', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+h1 {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+button {
+    font-size: 2rem;
+    height: 4rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+header button {
+    flex: 1;
+}
+
+.stockfish-command {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.stockfish-command textarea {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.stockfish-command button {
+    flex: 0.3;
+}
+
+.stockfish-output {
+    color: black;
+    flex: 1;
+    background: white;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.stockfish-output p {
+    margin: 0 0 0.2rem 0;
+    padding: 0.5rem;
+    background: #A1BD1C;
+}
+
+.stockfish-output p.error {
+    background: #D64141;
+    color: white;
+}

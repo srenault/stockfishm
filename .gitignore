@@ -1,0 +1,4 @@
+app/
+node_modules/
+project/node_modules
+project/www/**/*.js

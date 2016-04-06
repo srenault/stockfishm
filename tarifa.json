@@ -1,0 +1,142 @@
+{
+  "name": "Stockfishm",
+  "id": "org.lichess.stockfish",
+  "description": "",
+  "version": "1.0.0",
+  "platforms": [
+    "ios@4.1.0",
+    "android@5.1.1"
+  ],
+  "configurations": {
+    "ios": {
+      "default": {
+        "id": "org.lichess.stockfish.init",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm"
+      },
+      "dev": {
+        "id": "org.lichess.stockfish.dev",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm"
+      },
+      "stage": {
+        "id": "org.lichess.stockfish.stage",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm",
+        "release": true
+      },
+      "prod": {
+        "id": "org.lichess.stockfish.prod",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm",
+        "release": true
+      }
+    },
+    "android": {
+      "default": {
+        "id": "org.lichess.stockfish.init",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm"
+      },
+      "dev": {
+        "id": "org.lichess.stockfish.dev",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm"
+      },
+      "stage": {
+        "id": "org.lichess.stockfish.stage",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm",
+        "release": true
+      },
+      "prod": {
+        "id": "org.lichess.stockfish.prod",
+        "product_name": "Stockfishm",
+        "product_file_name": "Stockfishm",
+        "release": true
+      }
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "DisallowOverscroll": true,
+      "EnableViewportScale": false,
+      "KeyboardDisplayRequiresUserAction": false,
+      "ShowSplashScreenSpinner": false,
+      "SplashScreen": "screen",
+      "BackgroundColor": "0xff2a77b3",
+      "AutoHideSplashScreen": false,
+      "KeepRunning": true,
+      "Orientation": "portrait",
+      "windows-target-version": "10.0"
+    },
+    "settings": {
+      "ios": {
+        "UILaunchStoryboardName": "MainViewController"
+      }
+    },
+    "whitelist": {
+      "shared": [
+        {
+          "type": "access-origin",
+          "origin": [
+            "*"
+          ]
+        },
+        {
+          "type": "allow-intent",
+          "origin": [
+            "https://*/*"
+          ]
+        }
+      ],
+      "android": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "market:*",
+            "http://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*"
+          ]
+        },
+        {
+          "type": "allow-navigation",
+          "origin": [
+            "*"
+          ]
+        }
+      ],
+      "ios": [
+        {
+          "type": "allow-intent",
+          "origin": [
+            "itms:*",
+            "itms-apps:*",
+            "http://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*"
+          ]
+        }
+      ]
+    }
+  },
+  "author": {
+    "name": "",
+    "email": "",
+    "href": ""
+  },
+  "check": {
+    "ios": "./project/bin/check_ios.js",
+    "android": "./project/bin/check_android.js"
+  },
+  "plugins": {
+    "cordova-plugin-splashscreen": "cordova-plugin-splashscreen@3.2.0",
+    "cordova-plugin-whitelist": "cordova-plugin-whitelist@1.2.1",
+    "cordova-plugin-stockfish": "https://github.com/veloce/cordova-plugin-stockfish"
+  }
+}
