@@ -58,23 +58,23 @@ function bindEvents() {
   $startBtn().addEventListener('click', function() {
     this.disabled = true;
 
-    Stockfish.init(() => {
+    Stockfish.init().then(() => {
       writeOuput('Init OK');
       $cmd().value = CMDS.next();
       $exitBtn().disabled = false;
       $sendBtn().disabled = false;
       $cmd().disabled = false;
-    }, (e) => {
+    }).catch((e) => {
       writeError(`Unable to init stockfish: ${e}`);
       reset();
     });
   });
 
   $exitBtn().addEventListener('click', function() {
-    Stockfish.exit(() => {
+    Stockfish.exit().then(() => {
       writeOuput('Exit OK');
       reset();
-    }, (e) => {
+    }).catch((e) => {
       writeError(`Unable to exit stockfish: ${e}`);
     });
   });
@@ -82,10 +82,10 @@ function bindEvents() {
   $sendBtn().addEventListener('click', function() {
     const cmd = $cmd().value;
     if(cmd) {
-      Stockfish.cmd(cmd, () => {
+      Stockfish.cmd(cmd).then(() => {
         writeOuput(`${cmd} OK`);
         $cmd().value = CMDS.next();
-      }, (e) => {
+      }).catch((e) => {
         writeOuput(`Unable to perform command ${cmd}`);
       });
     } else {
